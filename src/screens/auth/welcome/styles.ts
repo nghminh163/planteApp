@@ -1,4 +1,10 @@
-import {BACKGROUND_COLOR, DARK, SECONDARY, SUBTITLE_TEXT, WHITE} from '@utils/colors';
+import {
+  BACKGROUND_COLOR,
+  DARK,
+  SECONDARY,
+  SUBTITLE_TEXT,
+  WHITE,
+} from '@utils/colors';
 import {StyleSheet} from 'react-native';
 import {
   heightPercentageToDP as hp,

@@ -11,6 +11,5 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins',
     fontWeight: '500',
     fontSize: hp(2),
-    lineHeight: hp(5.5),
   },
 });
