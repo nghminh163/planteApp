@@ -2,10 +2,10 @@ import TouchableCustom from '@components/Touchable';
 import ButtonText from '@components/Typography/ButtonText';
 import Header1 from '@components/Typography/Header1';
 import React from 'react';
-import {Image, View} from 'react-native';
+import { Image, View } from 'react-native';
 
 import styles from './styles';
-import {WHITE} from '@utils/colors';
+import { WHITE } from '@utils/colors';
 
 function RegisterScreen() {
   return (
