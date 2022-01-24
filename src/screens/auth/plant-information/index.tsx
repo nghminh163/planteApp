@@ -1,6 +1,10 @@
+import BodyRegular from "@components/Typography/BodyRegular";
+import Header2 from "@components/Typography/Header2";
+import SmallText from "@components/Typography/SmallText";
 import React from "react";
-import { View } from "react-native";
+import { View, Image } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
+// import { Image } from "react-native-svg";
 import styles from "./styles";
 
 function PlantInformation() {
@@ -15,7 +19,18 @@ function PlantInformation() {
     >
       <View
         style={styles.information}
-      />
+      >
+        <Header2>About</Header2>
+        <SmallText>Rosemary is a small evergreen plant of the mint family, the leaves of which are used to flavour foods. Native to the Mediterranean region, rosemary has naturalized throughout much of Europe and is widely grown in gardens in warm climates. The leaves have a pungent, slightly bitter taste and, dried or fresh, are generally used to season foods.</SmallText>
+      </View>
+      <View
+        style={styles.imageContainer}
+      >
+        <Image
+          style={styles.bgImage}
+          source={require('@assets/png/rosemary2.png')}
+        />
+      </View>
     </LinearGradient >
   );
 }
