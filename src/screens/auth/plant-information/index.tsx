@@ -70,7 +70,7 @@ function PlantInformation() {
         </ScrollView>
       </View>
       <Image
-        style={styles.bgImage}
+        style={styles.plantImage}
         source={require('@assets/png/rosemary2.png')}
       />
     </LinearGradient >

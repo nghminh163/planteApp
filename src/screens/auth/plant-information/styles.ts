@@ -1,9 +1,5 @@
 import {
   BACKGROUND_COLOR,
-  DARK,
-  SECONDARY,
-  SUBTITLE_TEXT,
-  WHITE,
 } from '@utils/colors';
 import { StyleSheet } from 'react-native';
 import {
@@ -15,55 +11,47 @@ const styles = StyleSheet.create({
   container: {
     width: '100%',
     height: '100%'
-    // position: 'relative',
-    // position: 'absolute'
-    // justifyContent: 'flex-end',
   },
-  information: {
+  backButton: {
     position: 'absolute',
-    height: '60%',
-    backgroundColor: BACKGROUND_COLOR,
-    borderTopRightRadius: 85,
-    paddingHorizontal: '10.1%',
-    paddingTop: '9.35%',
-    marginTop: '100%'
+    marginTop: hp(8.5),
+    marginLeft: wp(9.5)
   },
-  bgImage: {
+  plantLabel: {
     position: 'absolute',
-    marginLeft: 158,
-    marginTop: 50
+    marginLeft: wp(9.5),
+    marginTop: hp(14.2)
   },
   meta: {
     position: 'absolute',
-    // backgroundColor: 'BACKGROUND_COLOR',
-    width: 200,
-    height: 200,
-    marginTop: 245,
-    marginLeft: 35
-
+    marginTop: hp(29),
+    marginLeft: wp(9.5)
   },
   metaData: {
     display: 'flex',
     flexDirection: 'row',
-    marginBottom: 10
-    // justifyContent: 'space-evenly'
+    marginBottom: hp(1.2)
   },
-  plantLabel: {
+  plantImage: {
     position: 'absolute',
-    marginLeft: 35,
-    marginTop: 120,
+    right: 0,
+    marginTop: hp(6),
   },
-  backButton: {
+  information: {
     position: 'absolute',
-    marginTop: 73,
-    marginLeft: 35,
+    height: hp(60),
+    backgroundColor: BACKGROUND_COLOR,
+    borderTopRightRadius: 85,
+    paddingHorizontal: wp(10.1),
+    paddingTop: hp(4.3),
+    marginTop: hp(46)
   },
   infoButton: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingHorizontal: 20,
-    paddingVertical: 12,
+    paddingHorizontal: wp(4.9),
+    paddingVertical: wp(3.2),
     borderRadius: 14,
     borderWidth: 1,
     borderColor: 'rgba(90, 90, 117, 0.2)',
@@ -76,7 +64,8 @@ const styles = StyleSheet.create({
     zIndex: 999,
     elevation: 10,
     overflow: 'hidden',
-    marginTop: 15
+    marginTop: hp(1.8)
+
   }
 });
 
