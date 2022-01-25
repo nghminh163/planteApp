@@ -2,17 +2,15 @@ import React from 'react';
 import { StyleSheet, Text, TextProps } from 'react-native';
 import { heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
-function Header1(props: TextProps) {
-  return <Text {...props} style={[styles.header1, props.style]} />;
+export default function BodyBold(props: TextProps) {
+  return <Text {...props} style={[styles.bodyBold, props.style]} />;
 }
 
 const styles = StyleSheet.create({
-  header1: {
+  bodyBold: {
     fontFamily: 'Poppins',
-    fontWeight: 'bold',
-    fontSize: hp(4),
-    lineHeight: hp(5.5),
+    fontWeight: '600',
+    fontSize: hp(1.9),
+    lineHeight: hp(2.7),
   },
 });
-
-export default Header1;
