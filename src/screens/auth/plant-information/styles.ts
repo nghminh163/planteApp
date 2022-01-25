@@ -20,7 +20,6 @@ const styles = StyleSheet.create({
     // justifyContent: 'flex-end',
   },
   information: {
-    // position: 'relative',
     position: 'absolute',
     height: '60%',
     backgroundColor: BACKGROUND_COLOR,
@@ -30,14 +29,35 @@ const styles = StyleSheet.create({
     marginTop: '100%'
   },
   bgImage: {
-    // aspectRatio: 288 / 376,
-    // backgroundColor: 'red',
     position: 'absolute',
-    // height: hp(30),
-    // width: wp(76.8),
     marginLeft: 158,
     marginTop: 50
   },
+  meta: {
+    position: 'absolute',
+    // backgroundColor: 'BACKGROUND_COLOR',
+    width: 200,
+    height: 200,
+    marginTop: 245,
+    marginLeft: 35
+
+  },
+  metaData: {
+    display: 'flex',
+    flexDirection: 'row',
+    marginBottom: 10
+    // justifyContent: 'space-evenly'
+  },
+  plantLabel: {
+    position: 'absolute',
+    marginLeft: 35,
+    marginTop: 120,
+  },
+  backButton: {
+    position: 'absolute',
+    marginTop: 73,
+    marginLeft: 35,
+  }
 });
 
 export default styles;

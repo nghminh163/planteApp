@@ -2,17 +2,17 @@ import React from 'react';
 import { StyleSheet, Text, TextProps } from 'react-native';
 import { heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
-function Header2(props: TextProps) {
-  return <Text {...props} style={[styles.header2, props.style]} />;
+function Title(props: TextProps) {
+  return <Text {...props} style={[styles.title, props.style]} />;
 }
 
 const styles = StyleSheet.create({
-  header2: {
+  title: {
     fontFamily: 'Poppins',
     fontWeight: '600',
-    fontSize: hp(3),
+    fontSize: hp(2.5),
     // lineHeight: hp(5)
   },
 });
 
-export default Header2;
+export default Title;
