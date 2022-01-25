@@ -57,6 +57,26 @@ const styles = StyleSheet.create({
     position: 'absolute',
     marginTop: 73,
     marginLeft: 35,
+  },
+  infoButton: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 20,
+    paddingVertical: 12,
+    borderRadius: 14,
+    borderWidth: 1,
+    borderColor: 'rgba(90, 90, 117, 0.2)',
+    shadowOffset: {
+      width: 1,
+      height: 4
+    },
+    shadowRadius: 6,
+    shadowColor: 'rgba(0, 0, 0, 0.1)',
+    zIndex: 999,
+    elevation: 10,
+    overflow: 'hidden',
+    marginTop: 15
   }
 });
 
