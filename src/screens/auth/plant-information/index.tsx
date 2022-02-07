@@ -11,7 +11,7 @@ import { View, Image, FlatList, ScrollView, ImageProps } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import styles from "./styles";
 
-function PlantInformation() {
+function PlantInformationScreen() {
   return (
     <LinearGradient
       colors={['#E5E0DA', '#D3CCC4']}
@@ -73,6 +73,10 @@ function PlantInformation() {
         style={styles.plantImage}
         source={require('@assets/png/rosemary2.png')}
       />
+      <Image
+        style={styles.editBtn}
+        source={require('@assets/png/edit.png')}
+      />
     </LinearGradient >
   );
 }
@@ -83,9 +87,11 @@ interface InfoButtonProps {
 
 function InfoButton({ btnLabel }: InfoButtonProps) {
   return (
-    <View style={styles.infoButton}>
+    <View style={styles.infoBtn}>
       <BodyBold style={{ color: SECONDARY }}>{btnLabel}</BodyBold>
-      <Image source={require('@assets/png/forward.png')} />
+      {/* <View> */}
+      <Image style={styles.forwardBtn} source={require('@assets/png/forward.png')} />
+      {/* </View> */}
     </View>
   );
 }
@@ -98,12 +104,12 @@ interface MetaDataProps {
 function MetaData({ metaIcon, metaData }: MetaDataProps) {
   return (
     <View style={styles.metaData}>
-      <View style={{ width: 40 }}>
-        <Image source={metaIcon} />
+      <View style={{ width: 25, marginRight: 20 }}>
+        <Image style={styles.metaIcon} source={metaIcon} />
       </View>
       <SmallText>{metaData}</SmallText>
     </View>
   );
 }
 
-export default PlantInformation;
+export default PlantInformationScreen;

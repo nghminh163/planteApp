@@ -15,12 +15,14 @@ const styles = StyleSheet.create({
   backButton: {
     position: 'absolute',
     marginTop: hp(8.5),
-    marginLeft: wp(9.5)
+    marginLeft: wp(9.5),
+    height: hp(1.8),
+    width: hp(0.9)
   },
   plantLabel: {
     position: 'absolute',
     marginLeft: wp(9.5),
-    marginTop: hp(14.2)
+    marginTop: hp(14.2),
   },
   meta: {
     position: 'absolute',
@@ -32,10 +34,26 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginBottom: hp(1.2)
   },
+  metaIcon: {
+    flex: 1,
+    height: undefined,
+    resizeMode: 'contain',
+    width: undefined,
+  },
   plantImage: {
     position: 'absolute',
-    right: 0,
-    marginTop: hp(6),
+    right: -wp(17),
+    marginTop: hp(5),
+    height: hp(46.3),
+    width: hp(35.5)
+  },
+  editBtn: {
+    position: 'absolute',
+    // right: -wp(17),
+    marginTop: hp(45),
+    marginLeft: wp(80),
+    height: hp(3),
+    width: hp(3)
   },
   information: {
     position: 'absolute',
@@ -46,10 +64,11 @@ const styles = StyleSheet.create({
     paddingTop: hp(4.3),
     marginTop: hp(46)
   },
-  infoButton: {
+  infoBtn: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center',
     paddingHorizontal: wp(4.9),
     paddingVertical: wp(3.2),
     borderRadius: 14,
@@ -65,7 +84,10 @@ const styles = StyleSheet.create({
     elevation: 10,
     overflow: 'hidden',
     marginTop: hp(1.8)
-
+  },
+  forwardBtn: {
+    height: hp(1.8),
+    width: hp(0.9)
   }
 });
 

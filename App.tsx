@@ -3,14 +3,16 @@ import React from 'react';
 import VerifyMobile from '@screens/auth/verify-mobile';
 import RegisterScreen from '@screens/auth/register';
 import WelcomeScreen from '@screens/auth/welcome';
-import PlantInformation from '@screens/auth/plant-information';
+import PlantInformationScreen from '@screens/auth/plant-information';
+import CategoryScreenScreen from '@screens/auth/category';
 
 function App() {
   return (
     <>
       {/* <RegisterScreen /> */}
       {/* <WelcomeScreen /> */}
-      <PlantInformation />
+      <PlantInformationScreen />
+      {/* <CategoryScreenScreen /> */}
     </>
   );
 }
