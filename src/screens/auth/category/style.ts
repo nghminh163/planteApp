@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     borderColor: '#5A5A7533',
     borderWidth: 0.86,
     borderRadius: 13.68,
-    marginBottom: hp(2)
+    marginBottom: hp(3)
   },
   widgetImageContainer: {
     height: hp(17.3),
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   widgetImage: {
     flex: 1,
     resizeMode: 'contain',
-    width: wp(24),
+    width: wp(30),
   },
   widgetLabel: {
     marginLeft: wp(2.4),
