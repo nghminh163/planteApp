@@ -34,6 +34,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginBottom: hp(1.2)
   },
+  metaIconContainer: {
+    width: 25,
+    marginRight: 20
+  },
   metaIcon: {
     flex: 1,
     height: undefined,
@@ -49,7 +53,6 @@ const styles = StyleSheet.create({
   },
   editBtn: {
     position: 'absolute',
-    // right: -wp(17),
     marginTop: hp(45),
     marginLeft: wp(80),
     height: hp(3),

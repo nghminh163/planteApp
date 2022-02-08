@@ -11,8 +11,8 @@ function App() {
     <>
       {/* <RegisterScreen /> */}
       {/* <WelcomeScreen /> */}
-      <PlantInformationScreen />
-      {/* <CategoryScreenScreen /> */}
+      {/* <PlantInformationScreen /> */}
+      <CategoryScreenScreen />
     </>
   );
 }

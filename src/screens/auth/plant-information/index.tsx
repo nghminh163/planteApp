@@ -1,13 +1,10 @@
 import BodyBold from "@components/Typography/BodyBold";
-import BodyRegular from "@components/Typography/BodyRegular";
-import Header1 from "@components/Typography/Header1";
 import Header2 from "@components/Typography/Header2";
 import SmallText from "@components/Typography/SmallText";
 import Title from "@components/Typography/Title";
 import { SECONDARY } from "@utils/colors";
-import { images } from "@utils/images";
 import React from "react";
-import { View, Image, FlatList, ScrollView, ImageProps } from "react-native";
+import { View, Image, ScrollView, ImageProps } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import styles from "./styles";
 
@@ -104,7 +101,7 @@ interface MetaDataProps {
 function MetaData({ metaIcon, metaData }: MetaDataProps) {
   return (
     <View style={styles.metaData}>
-      <View style={{ width: 25, marginRight: 20 }}>
+      <View style={styles.metaIconContainer}>
         <Image style={styles.metaIcon} source={metaIcon} />
       </View>
       <SmallText>{metaData}</SmallText>
