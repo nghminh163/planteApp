@@ -12,6 +12,8 @@ import SmallSubText from "@components/Typography/SmallSubText";
 import { DARK } from "@utils/colors";
 
 function CategoryScreenScreen() {
+
+  // dummy data. For used in prototype and testing only
   const data = [
     { id: '1', source: require("@assets/png/plant1.png"), backgroundColor: ['#E5E0DA', '#D3CCC4'] },
     { id: '2', source: require("@assets/png/plant2.png"), backgroundColor: ['#DAE0E5', '#C4C9D3'] },

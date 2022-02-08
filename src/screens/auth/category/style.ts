@@ -48,16 +48,13 @@ const styles = StyleSheet.create({
   widgetImage: {
     flex: 1,
     resizeMode: 'contain',
-    width: wp(30),
+    width: wp(40),
   },
   widgetLabel: {
     marginLeft: wp(2.4),
     marginTop: hp(1),
-    // backgroundColor: 'red',
   },
   widgetRow: {
-    // marginLeft: wp(9.5),
-    // backgroundColor: 'red',
     flexDirection: 'row',
     justifyContent: 'space-evenly'
   }
