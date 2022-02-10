@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, TextProps } from 'react-native';
 import { heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
-function Title(props: TextProps) {
+function TitleBold(props: TextProps) {
   return <Text {...props} style={[styles.title, props.style]} />;
 }
 
@@ -15,4 +15,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Title;
+export default TitleBold;

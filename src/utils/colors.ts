@@ -5,3 +5,5 @@ export const WHITE = '#ffffff';
 export const SECONDARY = '#5AB282';
 export const PRIMARY = '#24243F';
 export const TEXT = '#5A5A75';
+export const ACCENT = '#F0F2F5';
+// export const SUBTLE_TEXT = '#B0B8B5';

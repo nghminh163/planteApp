@@ -1,7 +1,7 @@
 import BodyBold from "@components/Typography/BodyBold";
 import Header2 from "@components/Typography/Header2";
 import SmallText from "@components/Typography/SmallText";
-import Title from "@components/Typography/Title";
+import TitleBold from "@components/Typography/TitleBold";
 import { SECONDARY } from "@utils/colors";
 import React from "react";
 import { View, Image, ScrollView, ImageProps } from "react-native";
@@ -53,7 +53,7 @@ function PlantInformationScreen() {
           contentContainerStyle={{ paddingBottom: 90 }}
           showsVerticalScrollIndicator={false}
         >
-          <Title>About</Title>
+          <TitleBold>About</TitleBold>
 
           <SmallText>Rosemary is a small evergreen plant of the mint family, the leaves of which are used to flavour foods. Native to the Mediterranean region, rosemary has naturalized throughout much of Europe and is widely grown in gardens in warm climates. The leaves have a pungent, slightly bitter taste and, dried or fresh, are generally used to season foods.</SmallText>
 
