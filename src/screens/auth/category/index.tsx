@@ -11,7 +11,7 @@ import SmallText from "@components/Typography/SmallText";
 import SmallSubText from "@components/Typography/SmallSubText";
 import { DARK } from "@utils/colors";
 
-function CategoryScreenScreen() {
+function CategoryScreen() {
 
   // dummy data. For used in prototype and testing only
   const data = [
@@ -80,4 +80,4 @@ function Widget({ plantImage, backgroundColor }: WidgetProps) {
   )
 }
 
-export default CategoryScreenScreen;
+export default CategoryScreen;
