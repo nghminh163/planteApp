@@ -1,7 +1,7 @@
 import Header2 from "@components/Typography/Header2";
 import React from "react";
 import { Dimensions, FlatList, Image, ImageProps, View } from "react-native";
-import styles from "./style";
+import styles from "./styles";
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
