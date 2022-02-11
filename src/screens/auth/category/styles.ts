@@ -1,6 +1,3 @@
-import {
-  BACKGROUND_COLOR, PRIMARY,
-} from '@utils/colors';
 import { StyleSheet } from 'react-native';
 import {
   heightPercentageToDP as hp,
@@ -12,6 +9,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     // backgroundColor: 'red'
+    // flex: 1,
   },
   bannerContainer: {
     width: '100%',

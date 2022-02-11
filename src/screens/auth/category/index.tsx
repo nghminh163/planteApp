@@ -44,8 +44,8 @@ function CategoryScreen() {
         }}
         columnWrapperStyle={{
           justifyContent: 'space-between',
-          alignItems: 'stretch'
         }}
+        ListFooterComponent={<View style={{ height: 20 }} />}
       />
     </View>
   );
