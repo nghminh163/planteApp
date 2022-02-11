@@ -2,7 +2,7 @@ import {
   ACCENT,
   BACKGROUND_COLOR, PRIMARY, SUBTITLE_TEXT,
 } from '@utils/colors';
-import { Dimensions, StyleSheet } from 'react-native';
+import { Dimensions, Platform, StyleSheet } from 'react-native';
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
@@ -14,13 +14,18 @@ const styles = StyleSheet.create({
   container: {
     width: '100%',
     height: '100%',
-    // backgroundColor: 'red'
+  },
+  backgroundImage: {
+    position: 'absolute',
+    width: '100%',
+    height: undefined,
+    aspectRatio: 512 / 393
+
   },
   topScreenContainer: {
     flexDirection: 'row',
     marginTop: hp(8.5),
-    marginLeft: wp(9.5),
-    width: screenWidth - 2 * wp(9.5),
+    paddingHorizontal: wp(9.5),
     alignItems: 'center',
     justifyContent: 'space-between'
   },
@@ -35,7 +40,7 @@ const styles = StyleSheet.create({
   searchBar: {
     height: hp(5.9),
     width: screenWidth - 2 * wp(9.5),
-    marginTop: hp(3.5),
+    marginTop: Platform.OS === 'ios' ? hp(2.3) : hp(6),
     backgroundColor: ACCENT,
     marginLeft: wp(9.5),
     alignItems: 'center',
@@ -46,7 +51,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 2,
     shadowRadius: 2,
     elevation: 5,
-    // overflow: 'hidden'
   },
   searchIcon: {
     height: hp(3),
@@ -92,7 +96,7 @@ const styles = StyleSheet.create({
     paddingTop: hp(1)
   },
   flatList: {
-    marginTop: hp(2.),
+    marginTop: hp(2),
   }
 });
 

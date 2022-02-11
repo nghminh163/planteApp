@@ -24,6 +24,11 @@ function SearchScreen() {
   const numOfColumn = 2;
   return (
     <View>
+      <Image
+        style={styles.backgroundImage}
+        source={require('@assets/png/background.png')}
+      />
+
       <View style={styles.topScreenContainer}>
         <Image
           style={styles.backButton}
@@ -56,15 +61,10 @@ function SearchScreen() {
           numColumns={numOfColumn}
           keyExtractor={(item) => item.id}
           contentContainerStyle={styles.flatList}
-          columnWrapperStyle={{
-            justifyContent: 'space-between',
-          }}
+          columnWrapperStyle={{ justifyContent: 'space-between', }}
           ListFooterComponent={<View style={{ height: 20 }} />}
         />
       </View>
-
-
-
     </View>
 
   );
