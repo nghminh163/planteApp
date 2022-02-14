@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   searchBar: {
     height: hp(5.9),
     width: screenWidth - 2 * wp(9.5),
-    // marginTop: Platform.OS === 'ios' ? hp(2.3) : hp(6),
+    marginBottom: hp(3),
     backgroundColor: ACCENT,
     marginLeft: wp(9.5),
     alignItems: 'center',
@@ -60,12 +60,24 @@ const styles = StyleSheet.create({
     color: SUBTITLE_TEXT,
     marginLeft: wp(3)
   },
-  categoryContainer: {
+  suggestionPlant: {
     paddingHorizontal: wp(9.5),
-    marginTop: hp(3.1),
+    marginTop: hp(1),
+  },
+  categoryContainer: {
+    // felx: 1,
+    marginTop: hp(2.7),
+    // height: '100%',
+    // backgroundColor: SUBTITLE_TEXT
+  },
+  titleBold: {
+    paddingHorizontal: wp(9.5),
   },
   plantWidget: {
-    height: hp(17),
+    // height: hp(17),
+    // width: undefined,
+    // height: undefined,
+    aspectRatio: 142.1 / 138.46,
     width: wp(37.9),
     borderColor: '#5A5A7533',
     marginBottom: hp(3),
@@ -74,9 +86,13 @@ const styles = StyleSheet.create({
     shadowOpacity: 2,
     shadowRadius: 2,
     elevation: 5,
+    // backgroundColor: 'red',
+    // overflow: 'visible'
   },
   widgetImageContainer: {
-    height: hp(12.3),
+    height: undefined,
+    width: wp(37.9),
+    aspectRatio: 142.1 / 100.2,
     borderTopLeftRadius: 13.68,
     borderTopRightRadius: 13.68,
     alignItems: 'center'
@@ -87,8 +103,10 @@ const styles = StyleSheet.create({
     height: hp(17),
   },
   widgetLabel: {
+    // height: hp(6),
+    height: undefined,
     width: wp(37.9),
-    height: hp(17) - hp(12.3),
+    aspectRatio: 142.1 / 39.22,
     paddingLeft: wp(2.4),
     borderBottomLeftRadius: 13.68,
     borderBottomRightRadius: 13.68,
@@ -96,10 +114,30 @@ const styles = StyleSheet.create({
   },
   flatList: {
     marginTop: hp(2),
+    // width: screenWidth - 2 * wp(9.5),
+    paddingHorizontal: wp(9.5),
+    paddingBottom: 100,
+    // backgroundColor: ACCENT,
+    flexGrow: 11
   },
   smallSubText: {
     lineHeight: hp(2.5)
-  }
+  },
+  metaData: {
+    display: 'flex',
+    flexDirection: 'row',
+    marginBottom: hp(1.2)
+  },
+  metaIconContainer: {
+    width: 25,
+    marginRight: 20
+  },
+  metaIcon: {
+    flex: 1,
+    height: undefined,
+    resizeMode: 'contain',
+    width: undefined,
+  },
 });
 
 export default styles;

@@ -1,6 +1,7 @@
 import BodyRegular from "@components/Typography/BodyRegular";
 import Header2 from "@components/Typography/Header2";
 import SmallSubText from "@components/Typography/SmallSubText";
+import SmallText from "@components/Typography/SmallText";
 import TitleBold from "@components/Typography/TitleBold";
 import { LIGHT } from "@utils/colors";
 import React from "react";
@@ -22,7 +23,7 @@ function SearchScreen() {
   const { height } = Image.resolveAssetSource(require('@assets/png/background.png'));
 
   return (
-    <View>
+    <View style={styles.container}>
       <Image
         style={styles.backgroundImage}
         source={require('@assets/png/background.png')}
@@ -39,7 +40,7 @@ function SearchScreen() {
 
       <View style={[
         styles.searchBar,
-        { marginTop: (height / PixelRatio.get()) - (PixelRatio.get() === 2 ? 150 : 90) }
+        { marginTop: (height / PixelRatio.get()) - (PixelRatio.get() === 2 ? 152 : 90) }
       ]}>
         <Image
           style={styles.searchIcon}
@@ -48,8 +49,19 @@ function SearchScreen() {
         <BodyRegular style={styles.searchText}>Search Plant</BodyRegular>
       </View>
 
-      <View style={styles.categoryContainer}>
-        <TitleBold >Categories</TitleBold>
+
+      <TitleBold style={styles.titleBold} >Suggestion Plant</TitleBold>
+      <View style={styles.suggestionPlant}>
+        <SearchSuggestion metaIcon={require('@assets/png/plant6.png')} metaData={'Agave'} />
+        <SearchSuggestion metaIcon={require('@assets/png/plant7.png')} metaData={'Monstera obliqua'} />
+        <SearchSuggestion metaIcon={require('@assets/png/plant8.png')} metaData={'Cereus cactus'} />
+      </View>
+
+      <TitleBold style={styles.titleBold} >Categories</TitleBold>
+
+      {/* <View style={styles.categoryContainer}> */}
+      {/* <TitleBold style={styles.titleBold} >Categories</TitleBold> */}
+      <View style={{ flex: 1 }}>
         <FlatList
           data={data}
           renderItem={({ item }) => (
@@ -64,9 +76,12 @@ function SearchScreen() {
           keyExtractor={(item) => item.id}
           contentContainerStyle={styles.flatList}
           columnWrapperStyle={{ justifyContent: 'space-between', }}
-          ListFooterComponent={<View style={{ height: 20 }} />}
+          showsVerticalScrollIndicator={false}
+          ListFooterComponent={<View style={{ height: 20, }} />}
         />
       </View>
+
+      {/* </View> */}
     </View>
 
   );
@@ -97,8 +112,23 @@ function Widget({ plantImage, title, imageColor, labelColor }: WidgetProps) {
       </LinearGradient>
       <View style={[styles.widgetLabel, { backgroundColor: labelColor }]}>
         <SmallSubText style={styles.smallSubText}>{title}</SmallSubText>
-        {/* <SmallText style={{ color: DARK }} >Starfish Snake</SmallText> */}
       </View>
+    </View>
+  );
+}
+
+interface MetaDataProps {
+  metaIcon: ImageProps['source'],
+  metaData: string
+}
+
+function SearchSuggestion({ metaIcon, metaData }: MetaDataProps) {
+  return (
+    <View style={styles.metaData}>
+      <View style={styles.metaIconContainer}>
+        <Image style={styles.metaIcon} source={metaIcon} />
+      </View>
+      <SmallText>{metaData}</SmallText>
     </View>
   );
 }

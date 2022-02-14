@@ -9,7 +9,7 @@ import {
 import LinearGradient from "react-native-linear-gradient";
 import SmallText from "@components/Typography/SmallText";
 import SmallSubText from "@components/Typography/SmallSubText";
-import { DARK } from "@utils/colors";
+import { ACCENT, DARK } from "@utils/colors";
 
 function CategoryScreen() {
 
@@ -39,13 +39,15 @@ function CategoryScreen() {
         numColumns={numOfColumn}
         keyExtractor={(item) => item.id}
         style={{ marginLeft: wp(9.5), marginTop: hp(3.1) }}
+        showsVerticalScrollIndicator={false}
         contentContainerStyle={{
           width: screenWidth - 2 * wp(9.5),
+          // backgroundColor: ACCENT
         }}
         columnWrapperStyle={{
           justifyContent: 'space-between',
         }}
-        ListFooterComponent={<View style={{ height: 20 }} />}
+      // ListFooterComponent={<View style={{ height: 20, backgroundColor: 'red' }} />}
       />
     </View>
   );
