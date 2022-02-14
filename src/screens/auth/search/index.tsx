@@ -1,13 +1,12 @@
 import BodyRegular from "@components/Typography/BodyRegular";
 import Header2 from "@components/Typography/Header2";
 import SmallSubText from "@components/Typography/SmallSubText";
-import SmallText from "@components/Typography/SmallText";
 import TitleBold from "@components/Typography/TitleBold";
-import { DARK } from "@utils/colors";
+import { LIGHT } from "@utils/colors";
 import React from "react";
-import { Dimensions, FlatList, Image, ImageProps, View } from "react-native";
+import { FlatList, Image, ImageProps, PixelRatio, View } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
-import { heightPercentageToDP, widthPercentageToDP } from "react-native-responsive-screen";
+import { heightPercentageToDP } from "react-native-responsive-screen";
 import styles from "./styles";
 
 function SearchScreen() {
@@ -19,9 +18,9 @@ function SearchScreen() {
     { id: '5', plantImage: require("@assets/png/monstera.png"), title: 'Monstera', imageColor: ['#DAE0E5', '#C4C9D3'], labelColor: '#F5F7FA' },
     { id: '6', plantImage: require("@assets/png/calathea.png"), title: 'Calathea', imageColor: ['#E5E0DA', '#D3CCC4'], labelColor: '#FFFAF5' },
   ]
-
-  const screenWidth = Dimensions.get('window').width;
   const numOfColumn = 2;
+  const { height } = Image.resolveAssetSource(require('@assets/png/background.png'));
+
   return (
     <View>
       <Image
@@ -32,13 +31,16 @@ function SearchScreen() {
       <View style={styles.topScreenContainer}>
         <Image
           style={styles.backButton}
-          source={require('@assets/png/back.png')}
+          source={require('@assets/png/accent-back.png')}
         />
-        <Header2>Search Results</Header2>
+        <Header2 style={{ color: LIGHT }}>Search Results</Header2>
         <View style={styles.backButton} />
       </View>
 
-      <View style={styles.searchBar}>
+      <View style={[
+        styles.searchBar,
+        { marginTop: (height / PixelRatio.get()) - (PixelRatio.get() === 2 ? 150 : 90) }
+      ]}>
         <Image
           style={styles.searchIcon}
           source={require('@assets/png/search.png')}
@@ -94,7 +96,7 @@ function Widget({ plantImage, title, imageColor, labelColor }: WidgetProps) {
         />
       </LinearGradient>
       <View style={[styles.widgetLabel, { backgroundColor: labelColor }]}>
-        <SmallSubText style={{ lineHeight: heightPercentageToDP(2.5) }}>{title}</SmallSubText>
+        <SmallSubText style={styles.smallSubText}>{title}</SmallSubText>
         {/* <SmallText style={{ color: DARK }} >Starfish Snake</SmallText> */}
       </View>
     </View>

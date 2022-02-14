@@ -1,8 +1,7 @@
 import {
-  ACCENT,
-  BACKGROUND_COLOR, PRIMARY, SUBTITLE_TEXT,
+  ACCENT, SUBTITLE_TEXT,
 } from '@utils/colors';
-import { Dimensions, Platform, StyleSheet } from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
@@ -35,12 +34,12 @@ const styles = StyleSheet.create({
   },
   backButton: {
     height: hp(1.8),
-    width: hp(0.9)
+    width: hp(0.9),
   },
   searchBar: {
     height: hp(5.9),
     width: screenWidth - 2 * wp(9.5),
-    marginTop: Platform.OS === 'ios' ? hp(2.3) : hp(6),
+    // marginTop: Platform.OS === 'ios' ? hp(2.3) : hp(6),
     backgroundColor: ACCENT,
     marginLeft: wp(9.5),
     alignItems: 'center',
@@ -97,6 +96,9 @@ const styles = StyleSheet.create({
   },
   flatList: {
     marginTop: hp(2),
+  },
+  smallSubText: {
+    lineHeight: hp(2.5)
   }
 });
 
